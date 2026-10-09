@@ -290,12 +290,12 @@ procedure(HW3CreateP3(lib)
       unless(param
         printf("Available npn_bjt parameters: %L\n" cdf~>parameters~>name)
         error("No unambiguous CDF parameter for %s.\n" car(spec)))
-      unless(member(param~>type list("string" "float" "int"))
-        error("Unsupported CDF type for %s: %L.\n" param~>name param~>type))
+      unless(member(param~>paramType list("string" "float" "int"))
+        error("Unsupported CDF type for %s: %L.\n" param~>name param~>paramType))
       when(param~>callback && param~>callback!=""
         error("%s requires a CDF callback; configure a template through its property form.\n"
           param~>name))
-      specsResolved=cons(list(param~>name param~>type cadr(spec)) specsResolved)
+      specsResolved=cons(list(param~>name param~>paramType cadr(spec)) specsResolved)
     )
     templateCV=dbOpenCellViewByType(lib "P3_AUTO_TEMPLATE" "schematic" "schematic" "a")
     unless(templateCV error("Could not create P3 template view.\n"))

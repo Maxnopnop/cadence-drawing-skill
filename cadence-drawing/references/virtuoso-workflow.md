@@ -18,6 +18,10 @@ net names. Give the wire constructor Manhattan points and remove consecutive
 duplicates. Reusing a name connects separate wire segments electrically;
 inspect the resulting geometry for accidental intersections between nets.
 
+CDF parameter value types are read from `param~>paramType`. The field
+`param~>type` describes the CDF data level (for example `baseCellData`) and
+must not be used as the instance property type.
+
 ## Configured-device copies
 
 Changing raw properties with `dbReplaceProp` does not execute the device's CDF
