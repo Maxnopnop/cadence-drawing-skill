@@ -1,0 +1,4 @@
+interface:
+  display_name: "Cadence Drawing"
+  short_description: "Draw native Virtuoso schematics with portable SKILL"
+  default_prompt: "Use $cadence-drawing to turn my circuit into native Virtuoso schematics and provide Linux loading commands."

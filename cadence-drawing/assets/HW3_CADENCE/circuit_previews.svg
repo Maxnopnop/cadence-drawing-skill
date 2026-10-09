@@ -1,0 +1,119 @@
+<?xml version='1.0' encoding='utf-8'?>
+<ns0:svg xmlns:ns0="http://www.w3.org/2000/svg" width="1320" height="570" viewBox="0 0 1320 570"><ns0:rect width="1320" height="570" fill="#f8fafc" /><ns0:style>text{font-family:Arial,sans-serif;fill:#172438;font-size:15px}.title{font-weight:bold;font-size:20px}.wire{stroke:#285b80;stroke-width:2.5;fill:none}.component{fill:white;stroke:#285b80;stroke-width:2}.small{font-size:13px}</ns0:style>
+<ns0:text x="28" y="40" class="title" font-family="Arial" fill="#172438" font-size="20" font-weight="bold">P3: DC bias</ns0:text>
+<ns0:circle class="component" cx="235" cy="260" r="30" fill="white" stroke="#285b80" stroke-width="2" />
+<ns0:path class="wire" d="M223,242 L223,278" stroke="#285b80" stroke-width="2.5" fill="none" />
+<ns0:path class="wire" d="M223,250 L245,237" stroke="#285b80" stroke-width="2.5" fill="none" />
+<ns0:path class="wire" d="M245,237 L245,215" stroke="#285b80" stroke-width="2.5" fill="none" />
+<ns0:path class="wire" d="M223,270 L245,283" stroke="#285b80" stroke-width="2.5" fill="none" />
+<ns0:path class="wire" d="M245,283 L245,305" stroke="#285b80" stroke-width="2.5" fill="none" />
+<ns0:path class="wire" d="M185,260 L223,260" stroke="#285b80" stroke-width="2.5" fill="none" />
+<ns0:path d="M244,282 l-10,-2 l5,-7 Z" fill="#285b80" />
+<ns0:text x="272" y="263" class="" font-family="Arial" fill="#172438" font-size="15">Q0</ns0:text>
+<ns0:text x="180" y="250" class="" font-family="Arial" fill="#172438" font-size="15">B</ns0:text>
+<ns0:text x="252" y="225" class="" font-family="Arial" fill="#172438" font-size="15">C</ns0:text>
+<ns0:text x="252" y="305" class="" font-family="Arial" fill="#172438" font-size="15">E</ns0:text>
+<ns0:text x="185" y="345" class="small" font-family="Arial" fill="#172438" font-size="13">ahdlLib / npn_bjt</ns0:text>
+<ns0:path class="wire" d="M245,215 L245,180" stroke="#285b80" stroke-width="2.5" fill="none" />
+<ns0:rect class="component" x="237" y="135" width="16" height="45" fill="white" stroke="#285b80" stroke-width="2" />
+<ns0:text x="259" y="150" class="" font-family="Arial" fill="#172438" font-size="15">RC</ns0:text>
+<ns0:text x="259" y="170" class="" font-family="Arial" fill="#172438" font-size="15">56 kΩ</ns0:text>
+<ns0:path class="wire" d="M245,135 L245,100" stroke="#285b80" stroke-width="2.5" fill="none" />
+<ns0:text x="220" y="87" class="" font-family="Arial" fill="#172438" font-size="15">+12 V</ns0:text>
+<ns0:path class="wire" d="M245,305 L245,370" stroke="#285b80" stroke-width="2.5" fill="none" />
+<ns0:rect class="component" x="237" y="370" width="16" height="45" fill="white" stroke="#285b80" stroke-width="2" />
+<ns0:text x="259" y="385" class="" font-family="Arial" fill="#172438" font-size="15">RE</ns0:text>
+<ns0:text x="259" y="405" class="" font-family="Arial" fill="#172438" font-size="15">16 kΩ</ns0:text>
+<ns0:path class="wire" d="M245,415 L245,440" stroke="#285b80" stroke-width="2.5" fill="none" />
+<ns0:path class="wire" d="M245,440 L245,450" stroke="#285b80" stroke-width="2.5" fill="none" />
+<ns0:path class="wire" d="M233.0,450 L257.0,450" stroke="#285b80" stroke-width="2.5" fill="none" />
+<ns0:path class="wire" d="M237.0,456 L253.0,456" stroke="#285b80" stroke-width="2.5" fill="none" />
+<ns0:path class="wire" d="M241.0,462 L249.0,462" stroke="#285b80" stroke-width="2.5" fill="none" />
+<ns0:path class="wire" d="M185,260 L145,260" stroke="#285b80" stroke-width="2.5" fill="none" />
+<ns0:rect class="component" x="100" y="252" width="45" height="16" fill="white" stroke="#285b80" stroke-width="2" />
+<ns0:path class="wire" d="M100,260 L50,260" stroke="#285b80" stroke-width="2.5" fill="none" />
+<ns0:text x="100" y="242" class="" font-family="Arial" fill="#172438" font-size="15">REQ = 12 kΩ</ns0:text>
+<ns0:text x="30" y="290" class="" font-family="Arial" fill="#172438" font-size="15">+4 V</ns0:text>
+<ns0:text x="28" y="510" class="small" font-family="Arial" fill="#172438" font-size="13">IS=1e-15, BF=75, BR=2, VAF=75</ns0:text>
+<ns0:path class="wire" d="M440,20 L440,550" stroke="#285b80" stroke-width="2.5" fill="none" />
+<ns0:text x="468" y="40" class="title" font-family="Arial" fill="#172438" font-size="20" font-weight="bold">P4(a): Output curves</ns0:text>
+<ns0:circle class="component" cx="670" cy="260" r="30" fill="white" stroke="#285b80" stroke-width="2" />
+<ns0:path class="wire" d="M658,242 L658,278" stroke="#285b80" stroke-width="2.5" fill="none" />
+<ns0:path class="wire" d="M658,250 L680,237" stroke="#285b80" stroke-width="2.5" fill="none" />
+<ns0:path class="wire" d="M680,237 L680,215" stroke="#285b80" stroke-width="2.5" fill="none" />
+<ns0:path class="wire" d="M658,270 L680,283" stroke="#285b80" stroke-width="2.5" fill="none" />
+<ns0:path class="wire" d="M680,283 L680,305" stroke="#285b80" stroke-width="2.5" fill="none" />
+<ns0:path class="wire" d="M620,260 L658,260" stroke="#285b80" stroke-width="2.5" fill="none" />
+<ns0:path d="M679,282 l-10,-2 l5,-7 Z" fill="#285b80" />
+<ns0:text x="707" y="263" class="" font-family="Arial" fill="#172438" font-size="15">Q0</ns0:text>
+<ns0:text x="615" y="250" class="" font-family="Arial" fill="#172438" font-size="15">B</ns0:text>
+<ns0:text x="687" y="225" class="" font-family="Arial" fill="#172438" font-size="15">C</ns0:text>
+<ns0:text x="687" y="305" class="" font-family="Arial" fill="#172438" font-size="15">E</ns0:text>
+<ns0:text x="620" y="345" class="small" font-family="Arial" fill="#172438" font-size="13">GF PDK / npn_inh</ns0:text>
+<ns0:path class="wire" d="M680,215 L680,130" stroke="#285b80" stroke-width="2.5" fill="none" />
+<ns0:path class="wire" d="M680,130 L810,130" stroke="#285b80" stroke-width="2.5" fill="none" />
+<ns0:path class="wire" d="M810,130 L810,230" stroke="#285b80" stroke-width="2.5" fill="none" />
+<ns0:circle class="component" cx="810" cy="260" r="30" fill="white" stroke="#285b80" stroke-width="2" />
+<ns0:text x="804" y="254" class="" font-family="Arial" fill="#172438" font-size="15">+</ns0:text>
+<ns0:text x="805" y="280" class="" font-family="Arial" fill="#172438" font-size="15">−</ns0:text>
+<ns0:text x="850" y="263" class="" font-family="Arial" fill="#172438" font-size="15">VCE</ns0:text>
+<ns0:path class="wire" d="M810,290 L810,440" stroke="#285b80" stroke-width="2.5" fill="none" />
+<ns0:path class="wire" d="M680,305 L680,440" stroke="#285b80" stroke-width="2.5" fill="none" />
+<ns0:path class="wire" d="M540,440 L810,440" stroke="#285b80" stroke-width="2.5" fill="none" />
+<ns0:path class="wire" d="M680,440 L680,450" stroke="#285b80" stroke-width="2.5" fill="none" />
+<ns0:path class="wire" d="M668.0,450 L692.0,450" stroke="#285b80" stroke-width="2.5" fill="none" />
+<ns0:path class="wire" d="M672.0,456 L688.0,456" stroke="#285b80" stroke-width="2.5" fill="none" />
+<ns0:path class="wire" d="M676.0,462 L684.0,462" stroke="#285b80" stroke-width="2.5" fill="none" />
+<ns0:path class="wire" d="M620,260 L540,260" stroke="#285b80" stroke-width="2.5" fill="none" />
+<ns0:path class="wire" d="M540,260 L540,320" stroke="#285b80" stroke-width="2.5" fill="none" />
+<ns0:circle class="component" cx="540" cy="350" r="25" fill="white" stroke="#285b80" stroke-width="2" /><ns0:path class="wire" d="M540,367 L540,333 L535,340 M540,333 L545,340" stroke="#285b80" stroke-width="2.5" fill="none" />
+<ns0:path class="wire" d="M540,375 L540,440" stroke="#285b80" stroke-width="2.5" fill="none" />
+<ns0:text x="490" y="310" class="" font-family="Arial" fill="#172438" font-size="15">IB</ns0:text>
+<ns0:text x="468" y="493" class="small" font-family="Arial" fill="#172438" font-size="13">VCE: 0 to 2.5 V, step 0.1 V</ns0:text>
+<ns0:text x="468" y="516" class="small" font-family="Arial" fill="#172438" font-size="13">IB: 0 to 30 µA, step 5 µA</ns0:text>
+<ns0:path class="wire" d="M880,20 L880,550" stroke="#285b80" stroke-width="2.5" fill="none" />
+<ns0:text x="900" y="40" class="title" font-family="Arial" fill="#172438" font-size="20" font-weight="bold">P4(b): Four-resistor bias</ns0:text>
+<ns0:circle class="component" cx="1160" cy="260" r="30" fill="white" stroke="#285b80" stroke-width="2" />
+<ns0:path class="wire" d="M1148,242 L1148,278" stroke="#285b80" stroke-width="2.5" fill="none" />
+<ns0:path class="wire" d="M1148,250 L1170,237" stroke="#285b80" stroke-width="2.5" fill="none" />
+<ns0:path class="wire" d="M1170,237 L1170,215" stroke="#285b80" stroke-width="2.5" fill="none" />
+<ns0:path class="wire" d="M1148,270 L1170,283" stroke="#285b80" stroke-width="2.5" fill="none" />
+<ns0:path class="wire" d="M1170,283 L1170,305" stroke="#285b80" stroke-width="2.5" fill="none" />
+<ns0:path class="wire" d="M1110,260 L1148,260" stroke="#285b80" stroke-width="2.5" fill="none" />
+<ns0:path d="M1169,282 l-10,-2 l5,-7 Z" fill="#285b80" />
+<ns0:text x="1197" y="263" class="" font-family="Arial" fill="#172438" font-size="15">Q0</ns0:text>
+<ns0:text x="1105" y="250" class="" font-family="Arial" fill="#172438" font-size="15">B</ns0:text>
+<ns0:text x="1177" y="225" class="" font-family="Arial" fill="#172438" font-size="15">C</ns0:text>
+<ns0:text x="1177" y="305" class="" font-family="Arial" fill="#172438" font-size="15">E</ns0:text>
+<ns0:text x="1110" y="345" class="small" font-family="Arial" fill="#172438" font-size="13">GF PDK / npn_inh</ns0:text>
+<ns0:path class="wire" d="M1000,100 L1170,100" stroke="#285b80" stroke-width="2.5" fill="none" />
+<ns0:text x="1080" y="85" class="" font-family="Arial" fill="#172438" font-size="15">+2.5 V</ns0:text>
+<ns0:rect class="component" x="992" y="140" width="16" height="45" fill="white" stroke="#285b80" stroke-width="2" />
+<ns0:text x="1014" y="155" class="" font-family="Arial" fill="#172438" font-size="15">R2</ns0:text>
+<ns0:text x="1014" y="175" class="" font-family="Arial" fill="#172438" font-size="15">10 kΩ</ns0:text>
+<ns0:path class="wire" d="M1000,100 L1000,140" stroke="#285b80" stroke-width="2.5" fill="none" />
+<ns0:path class="wire" d="M1000,185 L1000,260" stroke="#285b80" stroke-width="2.5" fill="none" />
+<ns0:path class="wire" d="M1000,260 L1110,260" stroke="#285b80" stroke-width="2.5" fill="none" />
+<ns0:path class="wire" d="M1000,260 L1000,370" stroke="#285b80" stroke-width="2.5" fill="none" />
+<ns0:rect class="component" x="992" y="370" width="16" height="45" fill="white" stroke="#285b80" stroke-width="2" />
+<ns0:text x="1014" y="385" class="" font-family="Arial" fill="#172438" font-size="15">R1</ns0:text>
+<ns0:text x="1014" y="405" class="" font-family="Arial" fill="#172438" font-size="15">7.5 kΩ</ns0:text>
+<ns0:path class="wire" d="M1000,415 L1000,440" stroke="#285b80" stroke-width="2.5" fill="none" />
+<ns0:rect class="component" x="1162" y="140" width="16" height="45" fill="white" stroke="#285b80" stroke-width="2" />
+<ns0:text x="1184" y="155" class="" font-family="Arial" fill="#172438" font-size="15">RC</ns0:text>
+<ns0:text x="1184" y="175" class="" font-family="Arial" fill="#172438" font-size="15">100 Ω</ns0:text>
+<ns0:path class="wire" d="M1170,100 L1170,140" stroke="#285b80" stroke-width="2.5" fill="none" />
+<ns0:path class="wire" d="M1170,185 L1170,215" stroke="#285b80" stroke-width="2.5" fill="none" />
+<ns0:path class="wire" d="M1170,305 L1170,370" stroke="#285b80" stroke-width="2.5" fill="none" />
+<ns0:rect class="component" x="1162" y="370" width="16" height="45" fill="white" stroke="#285b80" stroke-width="2" />
+<ns0:text x="1184" y="385" class="" font-family="Arial" fill="#172438" font-size="15">RE</ns0:text>
+<ns0:text x="1184" y="405" class="" font-family="Arial" fill="#172438" font-size="15">74.29 Ω</ns0:text>
+<ns0:path class="wire" d="M1170,415 L1170,440" stroke="#285b80" stroke-width="2.5" fill="none" />
+<ns0:path class="wire" d="M1000,440 L1170,440" stroke="#285b80" stroke-width="2.5" fill="none" />
+<ns0:path class="wire" d="M1170,440 L1170,450" stroke="#285b80" stroke-width="2.5" fill="none" />
+<ns0:path class="wire" d="M1158.0,450 L1182.0,450" stroke="#285b80" stroke-width="2.5" fill="none" />
+<ns0:path class="wire" d="M1162.0,456 L1178.0,456" stroke="#285b80" stroke-width="2.5" fill="none" />
+<ns0:path class="wire" d="M1166.0,462 L1174.0,462" stroke="#285b80" stroke-width="2.5" fill="none" />
+<ns0:text x="900" y="510" class="small" font-family="Arial" fill="#172438" font-size="13">Target: IC=5 mA and VC=2.0 V</ns0:text>
+<ns0:text x="28" y="555" class="small" font-family="Arial" fill="#172438" font-size="13">Reference sketches only. Native schematics are generated on Linux by build_hw3.il.</ns0:text>
+</ns0:svg>
