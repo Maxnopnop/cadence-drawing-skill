@@ -5,3 +5,5 @@
 *.yaml text eol=lf
 *.txt text eol=lf
 *.png binary
+
+*.csh text eol=lf

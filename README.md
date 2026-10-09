@@ -39,3 +39,9 @@ The package is prepared automation, not a certified simulator result.
 
 No PDKs, transistor model files, Cadence binaries, license data, or source
 homework PDFs are distributed. Use your organization's own Cadence setup.
+
+## Fresh HW3 rebuild
+
+Use [FRESH_HW3_README.md](FRESH_HW3_README.md) for a new library and newly drawn
+P3, without using any prior schematic. The terminal launcher uses Spectre21.1.
+The two P4 circuits require a new configured GF transistor in that fresh library.
