@@ -28,6 +28,22 @@ needs verification in your Virtuoso session.
 Problem 4 requires your GF PDK. The template workflow below covers drawing
 all three in a fresh destination library; it does not overwrite an existing P3.
 
+## Compact view and native correctness check
+
+After updating the repository, load the script and run these in Virtuoso CIW:
+
+```lisp
+HW3CheckP3("HW3_BJT")
+HW3CreateP3("HW3_BJT" t)
+```
+
+The first command reads extracted pin connections and actual resistor, source,
+and transistor values. It prints `P3 CHECK PASSED` only if they match the
+homework. The second creates `P3_DC_BIAS_COMPACT`, keeps standard-size symbols,
+uses shorter wires, adds readable component labels, and checks the new circuit.
+It preserves the original schematic. Use Zoom to Fit (normally F) in the new
+schematic window. A connectivity/value pass is not a DC simulation result.
+
 ## 1. Find the shared folder
 
 Your screenshot shares C:\Users\A\Documents\FYP. A copy of this package is in
