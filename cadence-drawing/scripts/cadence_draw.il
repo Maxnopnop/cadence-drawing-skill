@@ -35,8 +35,8 @@ procedure(CDInst(cv cell name origin orient propName value)
 
 procedure(CDCopyConfigured(cv template origin)
   let((delta inst)
-    delta=list(xCoord(origin)-xCoord(template~>origin)
-               yCoord(origin)-yCoord(template~>origin))
+    delta=list(xCoord(origin)-xCoord(template~>xy)
+               yCoord(origin)-yCoord(template~>xy))
     inst=dbCopyFig(template cv list(delta "R0" 1.0))
     unless(inst error("Could not copy configured transistor.\n"))
     inst
