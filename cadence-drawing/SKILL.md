@@ -38,7 +38,7 @@ names and symbol-pin locations; stop on ambiguous electrical mappings.
 Require an explicit connection for additional substrate or bulk terminals.
 
 Adapt topology, device types, sources, values, and simulation variables to the
-current circuit. The [HW3 example](assets/HW3_CADENCE/README.txt) demonstrates
+current circuit. The [HW3 example](assets/HW3_CADENCE/README.md) demonstrates
 three BJT circuits; its device names and values are example-specific.
 
 ## Verify and hand off
