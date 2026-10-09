@@ -4,6 +4,30 @@ Status: portable SKILL source prepared on Windows. It has NOT been executed
 inside your Linux Virtuoso or tested against your school's PDK. Run Check and
 Save and compare the generated netlist against the wiring table below.
 
+## Quick start: automatically draw Problem 3
+
+This route uses the already-created `HW3_BJT` library and requires no manual
+transistor placement. Update the cloned repository in your Linux terminal:
+
+```bash
+git -C "$HOME/ELEC3400/HW3/cadence-drawing-skill" pull --ff-only
+```
+
+Then paste this single expression into the Virtuoso CIW:
+
+```lisp
+progn(load(strcat(getShellEnvVar("HOME") "/ELEC3400/HW3/cadence-drawing-skill/cadence-drawing/assets/HW3_CADENCE/build_hw3.il")) HW3CreateP3("HW3_BJT"))
+```
+
+The command discovers `npn_bjt` parameter names and types from its CDF, sets
+IS/BF/BR/VAF, draws Problem 3, checks and saves it, and opens the schematic.
+It refuses existing destination views and parameters requiring callbacks.
+The new command has been statically checked; its first native execution still
+needs verification in your Virtuoso session.
+
+Problem 4 requires your GF PDK. The template workflow below covers drawing
+all three in a fresh destination library; it does not overwrite an existing P3.
+
 ## 1. Find the shared folder
 
 Your screenshot shares C:\Users\A\Documents\FYP. A copy of this package is in

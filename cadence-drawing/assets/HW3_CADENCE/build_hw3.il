@@ -268,4 +268,60 @@ procedure(HW3Build(lib)
   t
 )
 
-printf("HW3 script loaded. Run HW3Info(), capture P3 and GF, then HW3Build(\"HW3_BJT\").\n")
+procedure(HW3CreateP3(lib)
+  let((master cdf specs param specsResolved templateCV template)
+    unless(ddGetObj(lib)
+      error("Destination library %s must exist first.\n" lib))
+    when(ddGetObj(lib "P3_DC_BIAS" "schematic")
+      error("%s/P3_DC_BIAS already exists; it will not be overwritten.\n" lib))
+    when(ddGetObj(lib "P3_AUTO_TEMPLATE" "schematic")
+      error("%s/P3_AUTO_TEMPLATE already exists; use a fresh library to retry.\n" lib))
+    master=dbOpenCellViewByType("ahdlLib" "npn_bjt" "symbol" "schematicSymbol" "r")
+    unless(master error("ahdlLib/npn_bjt symbol is unavailable.\n"))
+    cdf=cdfGetBaseCellCDF(ddGetObj("ahdlLib" "npn_bjt"))
+    unless(cdf error("Cannot inspect npn_bjt parameter definitions.\n"))
+    specs=list(list("IS" 1e-15) list("BF" 75.0)
+               list("BR" 2.0) list("VAF" 75.0))
+    ; Resolve real CDF names/types rather than assuming uppercase properties.
+    foreach(spec specs
+      param=nil
+      foreach(p cdf~>parameters
+        when(upperCase(p~>name)==car(spec) param=p))
+      unless(param
+        printf("Available npn_bjt parameters: %L\n" cdf~>parameters~>name)
+        error("No unambiguous CDF parameter for %s.\n" car(spec)))
+      unless(member(param~>type list("string" "float" "int"))
+        error("Unsupported CDF type for %s: %L.\n" param~>name param~>type))
+      when(param~>callback && param~>callback!=""
+        error("%s requires a CDF callback; configure a template through its property form.\n"
+          param~>name))
+      specsResolved=cons(list(param~>name param~>type cadr(spec)) specsResolved)
+    )
+    templateCV=dbOpenCellViewByType(lib "P3_AUTO_TEMPLATE" "schematic" "schematic" "a")
+    unless(templateCV error("Could not create P3 template view.\n"))
+    template=dbCreateInst(templateCV master "Q_TEMPLATE" 0:0 "R0")
+    unless(template error("Could not create transistor instance.\n"))
+    foreach(spec specsResolved
+      cond(
+        (cadr(spec)=="string"
+          dbReplaceProp(template car(spec) "string" sprintf(nil "%g" caddr(spec))))
+        (cadr(spec)=="float"
+          dbReplaceProp(template car(spec) "float" caddr(spec)))
+        (cadr(spec)=="int"
+          dbReplaceProp(template car(spec) "int" fix(caddr(spec))))
+      )
+      printf("Set %s (%s) = %L\n" car(spec) cadr(spec) caddr(spec))
+    )
+    CDTerm(template list("c" "collector"))
+    CDTerm(template list("b" "base"))
+    CDTerm(template list("e" "emitter"))
+    dbSave(templateCV)
+    HW3Bias(lib "P3_DC_BIAS" template nil)
+    dbClose(templateCV)
+    geOpen(?lib lib ?cell "P3_DC_BIAS" ?view "schematic" ?mode "a")
+    printf("P3 created and opened. Review Check and Save and Q0 properties before simulation.\n")
+    t
+  )
+)
+
+printf("HW3 loaded. For P3 only: HW3CreateP3(\"HW3_BJT\"). For all three: capture templates then HW3Build.\n")
