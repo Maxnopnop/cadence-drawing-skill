@@ -1,3 +1,24 @@
+# 已确认 GF 8HP：优先使用此启动方式
+
+保存并正常关闭旧 Cadence。在 Linux terminal 粘贴：
+
+```tcsh
+cd ~/ELEC3400/HW3/cadence-drawing-skill
+git pull --ff-only
+cd cadence-drawing/assets/P4_CADENCE_TRANSFER
+tcsh launch_gf_p4.csh
+```
+
+启动器使用已确认的 `/dfs/app/gf/gf130HPSIGE_8XP/V1_8_6_0b`，
+设置 GF_PDK_HOME/CDSHOME，使用官方 wireopt413 库配置（schematic 仿真），
+在 HW3 下新建 GF_P4_时间_PID 项目。只在学校机器的新项目中复制官方
+初始化文件；公开仓库不含 PDK 代码或模型。Spectre 使用21.1。
+
+此脚本尚未在远程执行；出现错误请发 P4.log 的末尾。
+新 GF_SETUP 窗口打开后，按下方说明配置 npn_inh，再生成两张 P4 图。
+
+---
+
 # P4 Cadence 传输包
 
 本包只生成新的 P4 电路，不打开或复制以前的作业 schematic。
