@@ -26,7 +26,7 @@ must not be used as the instance property type.
 
 Changing raw properties with `dbReplaceProp` does not execute the device's CDF
 callbacks. For simple analogLib resistors and DC sources, the example sets
-string properties `r` and `dc`. For a school PDK or AHDL device, configure the
+string properties `r`, `vdc` (voltage source), and `idc` (current source). For a school PDK or AHDL device, configure the
 source through the property form and apply it before copying the instance.
 `dbCopyFig` preserves existing instance properties; it does not prove that a
 source instance was configured correctly. Confirm the copied properties and
@@ -49,9 +49,9 @@ ground rule for a device that requires a different bulk bias.
 
 ## Verification evidence
 
-The repository has been statically validated. Native execution, CDF behavior,
-symbol geometry, license availability, and GF model simulation require the
-user's Virtuoso environment. They have not been certified by static checks.
+The repository has been statically validated. P3 generation has been observed in the user's Virtuoso environment.
+Full correctness checks, compact placement, and GF model simulation remain
+subject to verification in that environment.
 
 After `schCheck`, open each generated cell, inspect wire junctions and model
 properties, and compare its ADE-generated netlist with the example's net table.

@@ -4,6 +4,9 @@ A reusable Codex skill for drawing native Cadence Virtuoso schematics from
 circuit descriptions. Portable SKILL runs inside a configured Linux Virtuoso
 session; Linux diagnostics help locate the tools and shared folders.
 
+For the HW3 setup used on the ECE Linux desktop, follow the
+[short ECE desktop guide](ECE_DESKTOP_QUICKSTART.md).
+
 ## Install in Codex
 
 Copy the `cadence-drawing` directory into your Codex skills directory, normally
@@ -26,7 +29,10 @@ This preserves actual PDK properties without guessing internal CDF names.
 ## Validation status
 
 Static checks were performed on the skill structure, SKILL delimiters, and
-shell syntax. **The drawing scripts have not yet been executed in Virtuoso.**
+shell syntax. The P3 schematic has been generated in Virtuoso IC23.1. Extracted transistor
+and resistor connections and resistor values were confirmed in the remote
+session; source-value corrections and the compact layout still require their
+next native check. DC simulation and the GF examples remain unverified.
 After building, run Check and Save, inspect the native drawings and device
 properties, and compare the ADE netlist with the supplied connectivity table.
 The package is prepared automation, not a certified simulator result.
