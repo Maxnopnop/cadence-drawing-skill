@@ -43,7 +43,7 @@ procedure(FreshCopyConfigured(cv template origin)
   )
 )
 
-procedure(FreshWire(cv points netName)
+procedure(FreshWire(cv points netName @optional (forceLabel nil))
   let((clean previous wires)
     ; Remove consecutive duplicates; all supplied routes are Manhattan.
     foreach(point points
@@ -54,7 +54,7 @@ procedure(FreshWire(cv points netName)
     when(length(clean)>1
       wires=schCreateWire(cv "draw" "full" clean 0.0625 0.0625 0.0)
       unless(wires error("Could not draw wire %s.\n" netName))
-      when(netName && !member(netName FreshLabeledNets)
+      when(netName && (forceLabel || !member(netName FreshLabeledNets))
         FreshLabeledNets=cons(netName FreshLabeledNets)
         schCreateWireLabel(cv car(wires) car(clean)
           netName "lowerLeft" "R0" "stick" 0.125 nil)
@@ -142,7 +142,8 @@ procedure(FreshExtras(cv q)
           let((p tail)
             p=FreshPoint(q list(lowerCase(term~>name)))
             tail=list(xCoord(p)+0.5 yCoord(p))
-            FreshWire(cv list(p tail) "gnd!")
+            ; Separate substrate stub MUST have its own global-net label.
+            FreshWire(cv list(p tail) "gnd!" t)
             ; gnd! is the same global net as analogLib/gnd.
           )
         else
@@ -326,6 +327,8 @@ procedure(FreshCheckP3(lib @optional (cell "P3_DC_BIAS"))
       printf("  %s %s=%L; expected=%L\n" car(row) cadr(row) actual expected)
       unless(numberp(actual) && abs(actual-expected)<1e-6*expected errors=errors+1)
     )
+    printf("  Instance count=%d; expected=7\n" length(cv~>instances))
+    printf("  Net count=%d; expected=6\n" length(cv~>nets))
     unless(length(cv~>instances)==7 errors=errors+1)
     unless(length(cv~>nets)==6 errors=errors+1)
     dbSave(cv)
